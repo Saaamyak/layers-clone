@@ -1,13 +1,50 @@
-/* product-grid */
-.product-grid {
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-  gap: 20px; 
+/* style.css */
+body {
+  font-family: sans-serif; /* Adjust to match Layers website font */
+  margin: 0;
+  padding: 0;
 }
 
-/* product-card */
-.product-card {
-  border: 1px solid #ddd; 
-  padding: 15px;
-  text-align: center; /* Adjust if needed */
+.header {
+  /* Styles for the header */
+}
+
+.main {
+  display: flex; /* Make header and content side-by-side */
+  flex-direction: column;
+}
+
+.hero {
+  position: relative; /* For layering the hero image and content */
+  width: 100%; 
+  height: 500px; /* Adjust height as needed */
+}
+
+.hero-image {
+  width: 100%; /* Fills the hero section */
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the entire area */
+}
+
+.hero-content {
+  position: absolute; /* Layers on top of the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the content within the hero section */
+  color: white; /* Assuming text is white on the Layers website */
+  text-align: center;
+}
+
+/* Add styles for product-grid section (reference your existing CSS) */
+
+/* In your CSS File */
+.product-image {
+  max-width: 100%; /* Makes images fit within the card */
+  height: auto;  /* Maintains aspect ratio */
+  margin-bottom: 10px;  /* Adds space below image */
+}
+
+.product-name {
+  font-weight: bold;
+  margin-bottom: 5px; 
 }
